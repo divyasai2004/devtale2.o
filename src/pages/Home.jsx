@@ -6,64 +6,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-black mobile-content-padding pt-16 pb-8">
-      {/* Dark gaming grid background - Now visible on mobile */}
-      <div className="absolute inset-0 opacity-15">
-        <div 
-          className="absolute inset-0" 
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(0, 255, 255, 0.2) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(0, 255, 255, 0.2) 1px, transparent 1px)
-            `,
-            backgroundSize: '60px 60px',
-            animation: 'gridSlide 30s linear infinite'
-          }}
-        ></div>
-      </div>
-
-      {/* Dark gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-800 opacity-90"></div>
-
-      {/* Animated dark circuit lines - Now visible on mobile */}
-      <div className="absolute inset-0 opacity-40">
-        <div className="absolute top-0 left-1/4 w-px h-32 bg-gradient-to-b from-cyan-400 to-transparent animate-pulse"></div>
-        <div className="absolute top-0 right-1/3 w-px h-24 bg-gradient-to-b from-purple-400 to-transparent animate-pulse" style={{animationDelay: '1s'}}></div>
-        <div className="absolute bottom-0 left-1/3 w-px h-28 bg-gradient-to-t from-green-400 to-transparent animate-pulse" style={{animationDelay: '2s'}}></div>
-        <div className="absolute bottom-0 right-1/4 w-px h-20 bg-gradient-to-t from-pink-400 to-transparent animate-pulse" style={{animationDelay: '3s'}}></div>
-        
-        <div className="absolute top-1/4 left-0 h-px w-24 bg-gradient-to-r from-cyan-400 to-transparent animate-pulse" style={{animationDelay: '0.5s'}}></div>
-        <div className="absolute top-1/3 right-0 h-px w-32 bg-gradient-to-l from-purple-400 to-transparent animate-pulse" style={{animationDelay: '1.5s'}}></div>
-        <div className="absolute bottom-1/4 left-0 h-px w-28 bg-gradient-to-r from-green-400 to-transparent animate-pulse" style={{animationDelay: '2.5s'}}></div>
-        <div className="absolute bottom-1/3 right-0 h-px w-20 bg-gradient-to-l from-pink-400 to-transparent animate-pulse" style={{animationDelay: '3.5s'}}></div>
-      </div>
-
-      {/* Floating dark particles - Now visible on mobile */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-ping shadow-lg shadow-cyan-400/50" style={{animationDelay: '0s'}}></div>
-        <div className="absolute top-40 right-20 w-1 h-1 bg-purple-400 rounded-full animate-pulse shadow-lg shadow-purple-400/50" style={{animationDelay: '1s'}}></div>
-        <div className="absolute bottom-32 left-20 w-3 h-3 bg-green-400 rounded-full animate-bounce shadow-lg shadow-green-400/50" style={{animationDelay: '2s'}}></div>
-        <div className="absolute bottom-20 right-10 w-2 h-2 bg-pink-400 rounded-full animate-ping shadow-lg shadow-pink-400/50" style={{animationDelay: '3s'}}></div>
-        <div className="absolute top-60 left-1/3 w-1 h-1 bg-yellow-400 rounded-full animate-pulse shadow-lg shadow-yellow-400/50" style={{animationDelay: '4s'}}></div>
-        <div className="absolute top-80 right-1/3 w-2 h-2 bg-orange-400 rounded-full animate-bounce shadow-lg shadow-orange-400/50" style={{animationDelay: '5s'}}></div>
-      </div>
-
-      {/* Dark geometric gaming shapes - Now visible on mobile */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-10 left-5 w-16 h-16 border border-cyan-400 rotate-45 animate-spin shadow-lg shadow-cyan-400/30" style={{animationDuration: '20s'}}></div>
-        <div className="absolute bottom-10 right-5 w-12 h-12 border border-purple-400 rotate-12 animate-pulse shadow-lg shadow-purple-400/30"></div>
-        <div className="absolute top-1/3 right-10 w-8 h-8 bg-gradient-to-r from-green-500/30 to-blue-500/30 rotate-45 animate-bounce shadow-lg shadow-green-500/40" style={{animationDelay: '2s'}}></div>
-        <div className="absolute bottom-1/3 left-10 w-6 h-6 border border-pink-400 rounded-full animate-spin shadow-lg shadow-pink-400/30" style={{animationDuration: '15s'}}></div>
-        <div className="absolute top-1/2 left-1/4 w-4 h-4 bg-gradient-to-br from-yellow-400/30 to-orange-500/30 rotate-12 animate-pulse shadow-lg shadow-yellow-400/40"></div>
-        <div className="absolute bottom-1/2 right-1/4 w-10 h-10 border border-red-400 rotate-45 animate-spin shadow-lg shadow-red-400/30" style={{animationDuration: '25s'}}></div>
-      </div>
-
-      {/* Dark gaming scanlines - Now visible on mobile */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 255, 255, 0.1) 2px, rgba(0, 255, 255, 0.1) 4px)',
-          animation: 'scanlines 10s linear infinite'
-        }}></div>
-      </div>
+      {/* Subtle animated diagonal gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-800 animate-gradient-move" style={{backgroundSize: '200% 200%'}} />
 
       {/* Main content container */}
       <div className="relative z-10 min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-8 sm:pt-0 mobile-padding">
@@ -71,7 +15,7 @@ export default function Home() {
         {/* Gaming title with dark glow - Responsive sizing */}
         <div className="text-center mb-4 sm:mb-6 md:mb-8 lg:mb-10">
           <div className="relative">
-            <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-black mb-1 sm:mb-2 md:mb-4 lg:mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-green-400 bg-clip-text text-transparent drop-shadow-2xl animate-pulse text-balance">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-black mb-1 sm:mb-2 md:mb-4 lg:mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-green-400 bg-clip-text text-transparent drop-shadow-2xl animate-pulse text-balance">
                Welcome to🍵
             </h1>
             <div className="absolute -inset-1 sm:-inset-2 md:-inset-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 blur-xl sm:blur-2xl rounded-full -z-10"></div>
@@ -162,36 +106,15 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Dark bottom glow */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-gray-900/30 to-transparent"></div>
-      
-      {/* CSS Animations - Optimized for mobile */}
+      {/* Add CSS for animated gradient */}
       <style jsx>{`
-        @keyframes gridSlide {
-          0% { transform: translate(0, 0); }
-          100% { transform: translate(60px, 60px); }
+        @keyframes gradient-move {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
         }
-        
-        @keyframes scanlines {
-          0% { transform: translateY(0); }
-          100% { transform: translateY(20px); }
-        }
-        
-        @keyframes glitch {
-          0%, 100% { opacity: 0; }
-          50% { opacity: 0.1; }
-        }
-        
-        @media (max-width: 768px) {
-          @keyframes gridSlide {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(30px, 30px); }
-          }
-          
-          @keyframes scanlines {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(10px); }
-          }
+        .animate-gradient-move {
+          animation: gradient-move 16s ease-in-out infinite;
         }
       `}</style>
     </div>
