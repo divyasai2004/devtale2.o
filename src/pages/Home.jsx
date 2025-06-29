@@ -38,7 +38,7 @@ export default function Home() {
         <div className="text-center mb-4 sm:mb-6 md:mb-8 lg:mb-10 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto">
           <div className="relative">
             <div className="bg-gray-900/80 backdrop-blur-sm border border-cyan-400/30 rounded-xl p-3 sm:p-4 md:p-6 shadow-2xl shadow-black/50">
-              <div className="absolute top-2 left-3 flex space-x-1 mobile-hide-decorations sm:block">
+              <div className="absolute top-2 left-3 flex flex-row space-x-1">
                 <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
                 <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
@@ -107,7 +107,7 @@ export default function Home() {
       </div>
 
       {/* Add CSS for animated gradient */}
-      <style jsx>{`
+      <style>{`
         @keyframes gradient-move {
           0% { background-position: 0% 50%; }
           50% { background-position: 100% 50%; }

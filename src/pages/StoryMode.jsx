@@ -267,11 +267,6 @@ export default function StoryMode() {
         <div className="absolute top-0 right-1/3 w-px h-24 bg-gradient-to-b from-purple-400 to-transparent animate-pulse" style={{animationDelay: '1s'}}></div>
         <div className="absolute bottom-0 left-1/3 w-px h-28 bg-gradient-to-t from-green-400 to-transparent animate-pulse" style={{animationDelay: '2s'}}></div>
         <div className="absolute bottom-0 right-1/4 w-px h-20 bg-gradient-to-t from-pink-400 to-transparent animate-pulse" style={{animationDelay: '3s'}}></div>
-        
-        <div className="absolute top-1/4 left-0 h-px w-24 bg-gradient-to-r from-cyan-400 to-transparent animate-pulse" style={{animationDelay: '0.5s'}}></div>
-        <div className="absolute top-1/3 right-0 h-px w-32 bg-gradient-to-l from-purple-400 to-transparent animate-pulse" style={{animationDelay: '1.5s'}}></div>
-        <div className="absolute bottom-1/4 left-0 h-px w-28 bg-gradient-to-r from-green-400 to-transparent animate-pulse" style={{animationDelay: '2.5s'}}></div>
-        <div className="absolute bottom-1/3 right-0 h-px w-20 bg-gradient-to-l from-pink-400 to-transparent animate-pulse" style={{animationDelay: '3.5s'}}></div>
       </div>
 
       {/* Floating dark particles */}
@@ -528,7 +523,7 @@ export default function StoryMode() {
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-gray-900/30 to-transparent"></div>
       
       {/* CSS Animations */}
-      <style jsx>{`
+      <style>{`
         @keyframes gridSlide {
           0% { transform: translate(0, 0); }
           100% { transform: translate(60px, 60px); }

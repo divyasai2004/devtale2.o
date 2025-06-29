@@ -184,7 +184,6 @@ export default function CodeArena() {
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-4 text-orange-400 animate-pulse leading-tight pt-8 sm:pt-0" style={{textShadow: '0 2px 8px #000, 0 0 2px #ff9800'}}>
             Code Arena
           </h1>
-          <div className="w-20 sm:w-24 md:w-32 lg:w-40 h-1 sm:h-2 bg-gradient-to-r from-orange-400 via-red-400 to-yellow-400 mx-auto rounded-full animate-pulse shadow-lg shadow-orange-400/50" />
         </div>
 
         <div className="max-w-4xl mx-auto">
@@ -299,7 +298,7 @@ export default function CodeArena() {
       </div>
 
       {/* Custom CSS animations - Optimized for mobile */}
-      <style jsx>{`
+      <style>{`
         @keyframes gridMove {
           0% { transform: translate(0, 0); }
           100% { transform: translate(50px, 50px); }

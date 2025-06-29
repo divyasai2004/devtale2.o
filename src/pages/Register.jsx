@@ -93,7 +93,7 @@ export default function Register() {
       </div>
 
       {/* Custom styles for gaming effect */}
-      <style jsx>{`
+      <style>{`
         @keyframes register-grid-move {
           0% { background-position: 0 0, 0 0; }
           100% { background-position: 40px 40px, 40px 40px; }

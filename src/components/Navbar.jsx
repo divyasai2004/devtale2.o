@@ -19,13 +19,9 @@ export default function Navbar() {
   return (
     <>
       {/* Animated background effects - Reduced on mobile */}
-      <div className="fixed top-0 left-0 w-full h-16 sm:h-20 pointer-events-none z-0 mobile-hide-decorations sm:block">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-60 animate-pulse"></div>
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-purple-500/50 via-cyan-400/80 to-blue-500/50 shadow-lg shadow-cyan-400/30"></div>
-      </div>
+      {/* Removed all absolutely positioned/fixed gradient divs that could cause a persistent line */}
 
-      <nav className="mobile-nav-fix relative z-10 bg-black/95 backdrop-blur-sm border-b border-cyan-800/40 text-white px-3 sm:px-8 py-3 sm:py-4 flex justify-between items-center shadow-lg safe-area-top">
+      <nav className="mobile-nav-fix relative z-10 bg-black/95 backdrop-blur-sm text-white px-3 sm:px-8 py-3 sm:py-4 flex justify-between items-center shadow-lg safe-area-top">
         {/* Animated corner accents - Hidden on mobile */}
         <div className="absolute top-0 left-0 w-20 h-20 pointer-events-none mobile-hide-decorations sm:block">
           <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-cyan-400 opacity-60 animate-pulse"></div>
@@ -246,9 +242,12 @@ export default function Navbar() {
         />
       )}
 
+      {/* Subtle animated background effect for Navbar (no full-width/fixed/absolute div) */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-800 opacity-80 pointer-events-none z-0" style={{borderRadius: 'inherit'}} />
+
       {/* Add a subtle animated gradient bar below the Navbar for gaming effect */}
-      <div className="absolute left-0 right-0 bottom-0 h-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-navbar-bar" style={{zIndex: 9}} />
-      <style jsx>{`
+      {/* (REMOVED: <div className="absolute left-0 right-0 bottom-0 h-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-navbar-bar" style={{zIndex: 9}} />) */}
+      <style>{`
         @keyframes navbar-bar {
           0% { background-position: 0% 50%; }
           50% { background-position: 100% 50%; }
