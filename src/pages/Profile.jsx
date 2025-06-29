@@ -96,7 +96,7 @@ export default function Profile() {
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-blue-500/20 rounded-xl sm:rounded-2xl blur animate-pulse"></div>
             <div className="relative z-10">
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-blue-400 bg-clip-text text-transparent mb-2 drop-shadow-lg">
-                👤 Player Profile
+               Player Profile
               </h1>
               <div className="text-xs sm:text-sm text-cyan-300 font-medium tracking-wider">Digital Hero Stats</div>
             </div>
@@ -119,7 +119,7 @@ export default function Profile() {
               {/* Username Section */}
               <div className="mb-6">
                 <label className="block text-cyan-300 text-sm sm:text-base font-semibold mb-2">
-                  🎮 Hero Name
+                  🎮 Its You....
                 </label>
                 <input
                   type="text"

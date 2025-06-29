@@ -144,9 +144,6 @@ export default function Login() {
         ))}
       </div>
 
-      {/* Glowing border effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-cyan-500/10 to-purple-500/10 animate-pulse" />
-      
       {/* Floating energy orbs */}
       <div className="fixed top-20 right-20 w-3 h-3 bg-green-400 rounded-full animate-ping shadow-lg shadow-green-400/50" />
       <div className="fixed top-40 right-40 w-2 h-2 bg-cyan-400 rounded-full animate-pulse shadow-lg shadow-cyan-400/50" />
@@ -159,7 +156,6 @@ export default function Login() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-green-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent animate-pulse pt-8 sm:pt-0">
              Welcome to Devtale
           </h1>
-          <div className="w-40 h-2 bg-gradient-to-r from-green-400 via-cyan-400 to-purple-400 mx-auto rounded-full animate-pulse shadow-lg shadow-green-400/50" />
           <p className="text-cyan-200 mt-4 text-lg max-w-md mx-auto">
             Enter the digital realm of logic and adventure. Your hero name awaits!
           </p>
@@ -179,7 +175,7 @@ export default function Login() {
               </label>
               <input
                 type="text"
-                placeholder=" Enter your name..."
+                placeholder=" Enter name..."
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 onKeyDown={handleKeyPress}

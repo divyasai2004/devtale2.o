@@ -16,7 +16,7 @@ export default function Home() {
         <div className="text-center mb-4 sm:mb-6 md:mb-8 lg:mb-10">
           <div className="relative">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-black mb-1 sm:mb-2 md:mb-4 lg:mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-green-400 bg-clip-text text-transparent drop-shadow-2xl animate-pulse text-balance">
-               Welcome to🍵
+               Welcome to...
             </h1>
             <div className="absolute -inset-1 sm:-inset-2 md:-inset-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 blur-xl sm:blur-2xl rounded-full -z-10"></div>
           </div>
@@ -106,7 +106,35 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Add CSS for animated gradient */}
+      {/* Gaming animated background: neon grid + floating particles */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        {/* Neon grid */}
+        <div className="absolute inset-0 opacity-10 animate-home-grid-move" style={{
+          backgroundImage: `linear-gradient(rgba(34,211,238,0.10) 1px, transparent 1px),linear-gradient(90deg, rgba(124,58,237,0.10) 1px, transparent 1px)`,
+          backgroundSize: '48px 48px',
+        }}></div>
+        {/* Floating particles */}
+        {Array.from({length: 18}).map((_, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full animate-pulse"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              width: `${2 + Math.random() * 4}px`,
+              height: `${2 + Math.random() * 4}px`,
+              backgroundColor: [
+                '#22d3ee', '#7c3aed', '#f472b6', '#facc15', '#34d399', '#f87171'
+              ][i % 6],
+              animationDelay: `${Math.random() * 2}s`,
+              animationDuration: `${1.5 + Math.random()}s`,
+              opacity: 0.7
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Add CSS for animated gradient and grid */}
       <style>{`
         @keyframes gradient-move {
           0% { background-position: 0% 50%; }
@@ -115,6 +143,13 @@ export default function Home() {
         }
         .animate-gradient-move {
           animation: gradient-move 16s ease-in-out infinite;
+        }
+        @keyframes home-grid-move {
+          0% { background-position: 0 0, 0 0; }
+          100% { background-position: 48px 48px, 48px 48px; }
+        }
+        .animate-home-grid-move {
+          animation: home-grid-move 18s linear infinite;
         }
       `}</style>
     </div>

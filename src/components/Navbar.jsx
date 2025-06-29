@@ -41,7 +41,7 @@ export default function Navbar() {
         {/* Logo with gaming effects - Responsive sizing */}
         <div className="relative group">
           <h1 className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse cursor-pointer transition-all duration-300 group-hover:scale-110">
-            🍵 DevTale
+            DevTale
           </h1>
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 via-purple-400/20 to-pink-400/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
           <div className="absolute -inset-2 bg-gradient-to-r from-cyan-400/10 to-purple-400/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm -z-10"></div>
@@ -175,7 +175,7 @@ export default function Navbar() {
                     }}
                     className="w-full min-h-[48px] text-left px-4 py-3 text-cyan-300 hover:text-white hover:bg-cyan-400/10 rounded-lg transition-colors cursor-pointer gaming-item text-base"
                   >
-                     🏠 Home
+                      Home
                   </button>
                   <button 
                     onClick={() => {
@@ -184,7 +184,7 @@ export default function Navbar() {
                     }}
                     className="w-full min-h-[48px] text-left px-4 py-3 text-purple-300 hover:text-white hover:bg-purple-400/10 rounded-lg transition-colors cursor-pointer gaming-item text-base"
                   >
-                    📖 Story Mode
+                     Story Mode
                   </button>
                   <button 
                     onClick={() => {
@@ -193,7 +193,7 @@ export default function Navbar() {
                     }}
                     className="w-full min-h-[48px] text-left px-4 py-3 text-red-300 hover:text-white hover:bg-red-400/10 rounded-lg transition-colors cursor-pointer gaming-item text-base"
                   >
-                    ⚔️ Code Arena
+                     Code Arena
                   </button>
                   {isLoggedIn && (
                     <button 
@@ -203,7 +203,7 @@ export default function Navbar() {
                       }}
                       className="w-full min-h-[48px] text-left px-4 py-3 text-green-300 hover:text-white hover:bg-green-400/10 rounded-lg transition-colors cursor-pointer gaming-item text-base"
                     >
-                      📊 Progress
+                       Progress
                     </button>
                   )}
                   {isLoggedIn ? (
@@ -214,7 +214,7 @@ export default function Navbar() {
                       }}
                       className="w-full min-h-[48px] text-left px-4 py-3 text-orange-300 hover:text-white hover:bg-orange-400/10 rounded-lg transition-colors cursor-pointer gaming-item text-base"
                     >
-                      🚪 Logout
+                       Logout
                     </button>
                   ) : (
                     <button 
@@ -224,7 +224,7 @@ export default function Navbar() {
                       }}
                       className="w-full min-h-[48px] text-left px-4 py-3 text-blue-300 hover:text-white hover:bg-blue-400/10 rounded-lg transition-colors cursor-pointer gaming-item text-base"
                     >
-                      🔑 Login
+                       Login
                     </button>
                   )}
                 </div>

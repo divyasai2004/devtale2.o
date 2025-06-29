@@ -151,3 +151,18 @@ button:focus, a:focus, input:focus, select:focus, textarea:focus {
     display: none !important;
   }
 }
+
+/* TEMP: Hide any persistent horizontal line at the bottom of the viewport */
+body::after, #root::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  pointer-events: none;
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  z-index: 99999;
+}

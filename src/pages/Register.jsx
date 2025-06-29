@@ -57,13 +57,13 @@ export default function Register() {
       {/* Main content */}
       <div className="relative z-10 w-full max-w-sm mx-auto p-6 bg-black/80 border-2 border-cyan-400/30 rounded-2xl shadow-2xl backdrop-blur-md gaming-register-panel mt-4 sm:mt-8">
         <h1 className="text-3xl font-black mb-4 text-center bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse drop-shadow-lg pt-8 sm:pt-0">
-          📝 Register for Algoritale
+           Register for Devtale
         </h1>
         <p className="text-gray-400 mb-6 text-center">Begin your coding adventure by choosing a hero name.</p>
 
         <input
           type="text"
-          placeholder="👤 Choose a unique hero name..."
+          placeholder=" 🤴🏻Choose a unique hero name..."
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           onKeyDown={handleKeyPress}
@@ -78,7 +78,7 @@ export default function Register() {
           style={{ marginBottom: 'max(1.5rem, env(safe-area-inset-bottom, 0px))' }}
           disabled={!username.trim()}
         >
-          ✅ Register
+          Register
         </button>
 
         <p className="mt-4 text-sm text-gray-400 text-center">
