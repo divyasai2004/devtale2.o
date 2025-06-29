@@ -7,7 +7,6 @@ export default function Login() {
   const [error, setError] = useState("");
   const [insects, setInsects] = useState([]);
   const [particles, setParticles] = useState([]);
-  const [glowEffect, setGlowEffect] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {

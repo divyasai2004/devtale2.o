@@ -1,9 +1,8 @@
+/* eslint-disable no-eval */
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import CodeMirror from "@uiw/react-codemirror";
 import { javascript } from "@codemirror/lang-javascript";
-
-const username = localStorage.getItem("username") || "Hero";
 
 const scenes = [
   {
