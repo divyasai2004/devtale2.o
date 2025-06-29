@@ -66,7 +66,7 @@ export default function Home() {
       </div>
 
       {/* Main content container */}
-      <div className="relative z-10 min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-16 sm:pt-0 mobile-padding">
+      <div className="relative z-10 min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-20 sm:pt-0 mobile-padding">
         
         {/* Gaming title with dark glow - Responsive sizing */}
         <div className="text-center mb-4 sm:mb-6 md:mb-8 lg:mb-12">
@@ -109,33 +109,34 @@ export default function Home() {
 
         {/* Your original CTA button - Responsive sizing */}
         <button
-          className="bg-gray-800 border border-white-400 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base hover:bg-purple hover:text-black transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
+          className="bg-gray-800 border border-white-400 text-white px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-base sm:text-lg hover:bg-purple hover:text-black transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl min-h-[48px] min-w-[48px] focus:outline-none focus:ring-2 focus:ring-cyan-400"
+          style={{ marginBottom: 'max(1.5rem, env(safe-area-inset-bottom, 0px))' }}
           onClick={() => navigate("/story")}
         >
-          Begin the Adventure 🎮
+          Begin the Adventure ��
         </button>
 
         {/* Dark gaming HUD elements - Responsive positioning and sizing */}
-        <div className="absolute top-20 sm:top-4 md:top-6 left-2 sm:left-4 md:left-6">
+        <div className="absolute top-20 sm:top-4 md:top-6 left-2 sm:left-4 md:left-6 safe-area-top">
           <div className="flex items-center space-x-1 sm:space-x-2 bg-gray-900/90 backdrop-blur-sm rounded-lg px-2 sm:px-3 py-1 sm:py-2 border border-green-400/40 shadow-lg shadow-black/50">
             <div className="w-1 sm:w-2 h-1 sm:h-2 bg-green-400 rounded-full animate-pulse shadow-sm shadow-green-400/50"></div>
             <span className="text-xs sm:text-sm text-green-400 font-mono">ONLINE</span>
           </div>
         </div>
 
-        <div className="absolute top-20 sm:top-4 md:top-6 right-2 sm:right-4 md:right-6">
+        <div className="absolute top-20 sm:top-4 md:top-6 right-2 sm:right-4 md:right-6 safe-area-top">
           <div className="bg-gray-900/90 backdrop-blur-sm rounded-lg px-2 sm:px-3 py-1 sm:py-2 border border-purple-400/40 shadow-lg shadow-black/50">
             <span className="text-xs sm:text-sm text-purple-400 font-mono">LVL 1</span>
           </div>
         </div>
 
-        <div className="absolute bottom-4 sm:bottom-6 left-2 sm:left-4 md:left-6">
+        <div className="absolute bottom-4 sm:bottom-6 left-2 sm:left-4 md:left-6 safe-area-bottom">
           <div className="bg-gray-900/90 backdrop-blur-sm rounded-lg px-2 sm:px-3 py-1 sm:py-2 border border-pink-400/40 shadow-lg shadow-black/50">
             <span className="text-xs sm:text-sm text-pink-400 font-mono">⭐ XP: 10</span>
           </div>
         </div>
 
-        <div className="absolute bottom-4 sm:bottom-6 right-2 sm:right-4 md:right-6">
+        <div className="absolute bottom-4 sm:bottom-6 right-2 sm:right-4 md:right-6 safe-area-bottom">
           <div className="bg-gray-900/90 backdrop-blur-sm rounded-lg px-2 sm:px-3 py-1 sm:py-2 border border-yellow-400/40 shadow-lg shadow-black/50">
             <span className="text-xs sm:text-sm text-yellow-400 font-mono">🏆 WIN</span>
           </div>

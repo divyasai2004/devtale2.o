@@ -116,8 +116,8 @@ export default function Navbar() {
         <div className="md:hidden relative">
           <button
             onClick={toggleMobileMenu}
-            className="relative p-2 text-cyan-400 hover:text-white transition-all duration-300 group border border-cyan-400/30 rounded-md bg-black/50 backdrop-blur-sm hover:bg-cyan-400/20 cursor-pointer shadow-neon"
-            style={{ boxShadow: '0 0 12px 2px #22d3ee, 0 0 32px 8px #7c3aed55' }}
+            className="relative p-3 min-w-[48px] min-h-[48px] text-cyan-400 hover:text-white transition-all duration-300 group border border-cyan-400/30 rounded-md bg-black/50 backdrop-blur-sm hover:bg-cyan-400/20 cursor-pointer shadow-neon focus:outline-none focus:ring-2 focus:ring-cyan-400"
+            style={{ boxShadow: '0 0 12px 2px #22d3ee, 0 0 32px 8px #7c3aed55', zIndex: 100 }}
             aria-label="Toggle mobile menu"
           >
             {/* Animated hamburger lines */}
@@ -139,12 +139,16 @@ export default function Navbar() {
               <div
                 style={{
                   position: 'fixed',
-                  top: '4rem',
-                  right: '0.75rem',
-                  left: '0.75rem',
+                  top: 'max(4rem, env(safe-area-inset-top, 0px))',
+                  right: 'max(0.75rem, env(safe-area-inset-right, 0px))',
+                  left: 'max(0.75rem, env(safe-area-inset-left, 0px))',
                   zIndex: 99999,
+                  maxWidth: 'calc(100vw - 1.5rem)',
+                  width: '100%',
+                  transition: 'transform 0.2s cubic-bezier(.4,0,.2,1)',
+                  transform: isMobileMenuOpen ? 'translateY(0)' : 'translateY(-20px)',
                 }}
-                className="bg-gray-900/95 border-2 border-cyan-400/40 rounded-xl shadow-2xl backdrop-blur-md overflow-hidden relative gaming-dropdown"
+                className="bg-gray-900/95 border-2 border-cyan-400/40 rounded-xl shadow-2xl backdrop-blur-md overflow-hidden relative gaming-dropdown animate-fade-in"
               >
                 {/* Animated border glow - Reduced on mobile */}
                 <div className="absolute inset-0 rounded-xl pointer-events-none border-2 border-cyan-400/30 animate-dropdown-glow z-10 mobile-reduce-animations"></div>
@@ -180,7 +184,7 @@ export default function Navbar() {
                       window.location.href = '/';
                       toggleMobileMenu();
                     }}
-                    className="w-full text-left px-4 py-3 text-cyan-300 hover:text-white hover:bg-cyan-400/10 rounded-lg transition-colors cursor-pointer gaming-item text-base"
+                    className="w-full min-h-[48px] text-left px-4 py-3 text-cyan-300 hover:text-white hover:bg-cyan-400/10 rounded-lg transition-colors cursor-pointer gaming-item text-base"
                   >
                      🏠 Home
                   </button>
@@ -189,7 +193,7 @@ export default function Navbar() {
                       window.location.href = '/story';
                       toggleMobileMenu();
                     }}
-                    className="w-full text-left px-4 py-3 text-purple-300 hover:text-white hover:bg-purple-400/10 rounded-lg transition-colors cursor-pointer gaming-item text-base"
+                    className="w-full min-h-[48px] text-left px-4 py-3 text-purple-300 hover:text-white hover:bg-purple-400/10 rounded-lg transition-colors cursor-pointer gaming-item text-base"
                   >
                     📖 Story Mode
                   </button>
@@ -198,7 +202,7 @@ export default function Navbar() {
                       window.location.href = '/arena';
                       toggleMobileMenu();
                     }}
-                    className="w-full text-left px-4 py-3 text-red-300 hover:text-white hover:bg-red-400/10 rounded-lg transition-colors cursor-pointer gaming-item text-base"
+                    className="w-full min-h-[48px] text-left px-4 py-3 text-red-300 hover:text-white hover:bg-red-400/10 rounded-lg transition-colors cursor-pointer gaming-item text-base"
                   >
                     ⚔️ Code Arena
                   </button>
@@ -208,7 +212,7 @@ export default function Navbar() {
                         window.location.href = '/profile';
                         toggleMobileMenu();
                       }}
-                      className="w-full text-left px-4 py-3 text-green-300 hover:text-white hover:bg-green-400/10 rounded-lg transition-colors cursor-pointer gaming-item text-base"
+                      className="w-full min-h-[48px] text-left px-4 py-3 text-green-300 hover:text-white hover:bg-green-400/10 rounded-lg transition-colors cursor-pointer gaming-item text-base"
                     >
                       📊 Progress
                     </button>
@@ -219,7 +223,7 @@ export default function Navbar() {
                         handleLogout();
                         toggleMobileMenu();
                       }}
-                      className="w-full text-left px-4 py-3 text-orange-300 hover:text-white hover:bg-orange-400/10 rounded-lg transition-colors cursor-pointer gaming-item text-base"
+                      className="w-full min-h-[48px] text-left px-4 py-3 text-orange-300 hover:text-white hover:bg-orange-400/10 rounded-lg transition-colors cursor-pointer gaming-item text-base"
                     >
                       🚪 Logout
                     </button>
@@ -229,7 +233,7 @@ export default function Navbar() {
                         window.location.href = '/login';
                         toggleMobileMenu();
                       }}
-                      className="w-full text-left px-4 py-3 text-blue-300 hover:text-white hover:bg-blue-400/10 rounded-lg transition-colors cursor-pointer gaming-item text-base"
+                      className="w-full min-h-[48px] text-left px-4 py-3 text-blue-300 hover:text-white hover:bg-blue-400/10 rounded-lg transition-colors cursor-pointer gaming-item text-base"
                     >
                       🔑 Login
                     </button>
@@ -244,7 +248,7 @@ export default function Navbar() {
       {/* Mobile menu overlay */}
       {isMobileMenuOpen && (
         <div 
-          className="fixed inset-0 bg-black/50 z-40 md:hidden"
+          className="fixed inset-0 bg-black/50 z-40 md:hidden transition-opacity duration-200"
           onClick={toggleMobileMenu}
         />
       )}

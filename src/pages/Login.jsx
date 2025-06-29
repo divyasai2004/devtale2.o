@@ -83,7 +83,7 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-6 relative overflow-hidden">
+    <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-6 relative overflow-hidden pt-24 pb-8 safe-area-top safe-area-bottom">
       {/* Dark gaming background */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-gray-800" />
       
@@ -155,8 +155,8 @@ export default function Login() {
       
       {/* Main content with enhanced glass morphism */}
       <div className="relative z-10 text-center">
-        <div className="mb-8">
-          <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-green-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent animate-pulse">
+        <div className="mb-8 mt-4 sm:mt-8">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-green-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent animate-pulse pt-8 sm:pt-0">
              Welcome to Devtale
           </h1>
           <div className="w-40 h-2 bg-gradient-to-r from-green-400 via-cyan-400 to-purple-400 mx-auto rounded-full animate-pulse shadow-lg shadow-green-400/50" />
@@ -183,7 +183,7 @@ export default function Login() {
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 onKeyDown={handleKeyPress}
-                className="w-full p-4 rounded-xl bg-gray-800/80 border border-green-600 text-white placeholder-green-300/60 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition-all duration-300 backdrop-blur-sm shadow-lg shadow-green-500/20"
+                className="w-full p-4 min-h-[48px] rounded-xl bg-gray-800/80 border border-green-600 text-white placeholder-green-300/60 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition-all duration-300 backdrop-blur-sm shadow-lg shadow-green-500/20 text-base sm:text-lg"
               />
             </div>
 
@@ -195,14 +195,15 @@ export default function Login() {
 
             <button
               onClick={handleLogin}
-              className={`w-full p-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg ${
+              className={`w-full p-4 min-h-[48px] rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg focus:outline-none focus:ring-2 focus:ring-green-400 ${
                 !username.trim() 
                   ? 'bg-gray-600/50 cursor-not-allowed' 
-                  : 'bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-500 hover:to-cyan-500 shadow-green-500/25'
+                  : 'bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white'
               }`}
+              style={{ marginBottom: 'max(1.5rem, env(safe-area-inset-bottom, 0px))' }}
               disabled={!username.trim()}
             >
-               Lock in...⚔️
+              Start Adventure
             </button>
 
             <div className="mt-6 text-center">

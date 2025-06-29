@@ -95,7 +95,7 @@ export default function CodeArena() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white px-2 sm:px-4 py-4 sm:py-8 relative overflow-hidden pt-16 sm:pt-8 mobile-content-padding">
+    <div className="min-h-screen bg-black text-white px-2 sm:px-4 py-4 sm:py-8 relative overflow-hidden pt-24 pb-8 safe-area-top safe-area-bottom mobile-content-padding">
       {/* Epic gaming background with fire theme */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-red-900" />
       
@@ -180,8 +180,8 @@ export default function CodeArena() {
       
       {/* Main content with enhanced glass morphism */}
       <div className="relative z-10">
-        <div className="text-center mb-4 sm:mb-6 md:mb-8 relative z-10">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-4 text-orange-400 animate-pulse leading-tight" style={{textShadow: '0 2px 8px #000, 0 0 2px #ff9800'}}>
+        <div className="text-center mb-4 sm:mb-6 md:mb-8 relative z-10 mt-4 sm:mt-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-4 text-orange-400 animate-pulse leading-tight pt-8 sm:pt-0" style={{textShadow: '0 2px 8px #000, 0 0 2px #ff9800'}}>
             Code Arena
           </h1>
           <div className="w-20 sm:w-24 md:w-32 lg:w-40 h-1 sm:h-2 bg-gradient-to-r from-orange-400 via-red-400 to-yellow-400 mx-auto rounded-full animate-pulse shadow-lg shadow-orange-400/50" />
@@ -200,7 +200,7 @@ export default function CodeArena() {
                 setOutput("");
                 setMessage("");
               }}
-              className="w-full bg-gray-800/80 text-white p-2 sm:p-3 rounded-lg border border-orange-600 focus:border-orange-400 focus:ring-2 focus:ring-orange-400/50 transition-all duration-300 backdrop-blur-sm hover:scale-105 transform shadow-lg shadow-orange-500/20 text-sm sm:text-base"
+              className="w-full bg-gray-800/80 text-white p-3 sm:p-4 rounded-lg border border-orange-600 focus:border-orange-400 focus:ring-2 focus:ring-orange-400/50 transition-all duration-300 backdrop-blur-sm hover:scale-105 transform shadow-lg shadow-orange-500/20 text-base sm:text-lg min-h-[48px]"
             >
               {codeArenaQuestions.map((q) => (
                 <option key={q.id} value={q.id}>
@@ -279,7 +279,7 @@ export default function CodeArena() {
             <button
               onClick={runCode}
               disabled={isRunning}
-              className={`mt-3 sm:mt-4 px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg text-sm sm:text-base ${
+              className={`mt-3 sm:mt-4 px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-5 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg text-base sm:text-lg min-h-[48px] focus:outline-none focus:ring-2 focus:ring-orange-400 ${
                 isRunning 
                   ? 'bg-gradient-to-r from-red-500 to-orange-500 shadow-[0_0_20px_rgba(255,69,0,0.5)] animate-pulse shadow-red-500/50' 
                   : 'bg-gradient-to-r from-orange-500 to-red-500 hover:shadow-[0_0_15px_rgba(255,165,0,0.3)] shadow-orange-500/50'

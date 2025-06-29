@@ -245,7 +245,7 @@ export default function StoryMode() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white px-4 py-8 relative overflow-hidden pt-20">
+    <div className="min-h-screen bg-black text-white px-4 py-8 relative overflow-hidden pt-28 pb-8 safe-area-top safe-area-bottom">
       {/* Dark gaming grid background */}
       <div className="absolute inset-0 opacity-15">
         <div className="absolute inset-0" style={{
@@ -303,7 +303,7 @@ export default function StoryMode() {
       </div>
 
       {/* Gaming HUD Elements - Top Left */}
-      <div className="absolute top-4 left-4 z-20">
+      <div className="absolute top-4 left-4 z-20 safe-area-top">
         <div className="bg-gray-900/90 backdrop-blur-sm rounded-lg px-3 py-2 border border-cyan-400/40 shadow-lg shadow-black/50">
           <div className="flex items-center space-x-2">
             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse shadow-sm shadow-green-400/50"></div>
@@ -313,32 +313,18 @@ export default function StoryMode() {
       </div>
 
       {/* Gaming HUD Elements - Top Right */}
-      <div className="absolute top-4 right-4 z-20">
+      <div className="absolute top-4 right-4 z-20 safe-area-top">
         <div className="bg-gray-900/90 backdrop-blur-sm rounded-lg px-3 py-2 border border-purple-400/40 shadow-lg shadow-black/50">
           <span className="text-xs text-purple-400 font-mono">MISSION {currentSceneId}/11</span>
         </div>
       </div>
 
-      {/* Gaming HUD Elements - Bottom Left */}
-      <div className="absolute bottom-4 left-4 z-20">
-        <div className="bg-gray-900/90 backdrop-blur-sm rounded-lg px-3 py-2 border border-pink-400/40 shadow-lg shadow-black/50">
-          <span className="text-xs text-pink-400 font-mono">🎯 DIFFICULTY: {currentSceneId > 5 ? 'HARD' : currentSceneId > 2 ? 'MEDIUM' : 'EASY'}</span>
-        </div>
-      </div>
-
-      {/* Gaming HUD Elements - Bottom Right */}
-      <div className="absolute bottom-4 right-4 z-20">
-        <div className="bg-gray-900/90 backdrop-blur-sm rounded-lg px-3 py-2 border border-yellow-400/40 shadow-lg shadow-black/50">
-          <span className="text-xs text-yellow-400 font-mono">⚡ ENERGY: {100 - (currentSceneId * 5)}%</span>
-        </div>
-      </div>
-
       {/* Main content */}
-      <div className="relative z-10 max-w-4xl mx-auto">
+      <div className="relative z-10 max-w-4xl mx-auto pb-24">
         {/* Enhanced Header with Gaming Style */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-8 mt-4 sm:mt-8">
           <div className="relative inline-block">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-green-400 bg-clip-text text-transparent animate-pulse">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-green-400 bg-clip-text text-transparent animate-pulse pt-8 sm:pt-0">
               📖 STORY MODE
             </h1>
             {/* Gaming title glow effect */}
@@ -433,7 +419,7 @@ export default function StoryMode() {
                 <button
                   key={index}
                   onClick={() => handleChoice(choice)}
-                  className="group relative w-full text-left p-4 bg-gray-800/60 hover:bg-gray-700/60 border border-cyan-400/30 rounded-lg transition-all duration-300 hover:scale-105 transform shadow-lg hover:shadow-cyan-500/20 overflow-hidden"
+                  className="group relative w-full min-h-[48px] text-left p-4 bg-gray-800/60 hover:bg-gray-700/60 border border-cyan-400/30 rounded-lg transition-all duration-300 hover:scale-105 transform shadow-lg hover:shadow-cyan-500/20 overflow-hidden text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-cyan-400"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-cyan-400/10 to-cyan-400/0 transform -skew-x-12 translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
                   <span className="relative z-10">{choice.text}</span>
@@ -468,7 +454,7 @@ export default function StoryMode() {
               )}
 
               {/* Enhanced Code Editor */}
-              <div className="relative mb-4">
+              <div className="relative mb-4 overflow-x-auto rounded-lg">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 animate-pulse"></div>
                 <CodeMirror
                   value={code}
@@ -489,7 +475,7 @@ export default function StoryMode() {
               <button
                 onClick={runCode}
                 disabled={isAnimating}
-                className={`group relative w-full px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg overflow-hidden ${
+                className={`group relative w-full min-h-[48px] px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg overflow-hidden text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 ${
                   isAnimating 
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 shadow-[0_0_20px_rgba(34,211,238,0.5)] animate-pulse shadow-cyan-500/50' 
                     : 'bg-gradient-to-r from-cyan-500 to-blue-500 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] shadow-cyan-500/50'
@@ -501,7 +487,7 @@ export default function StoryMode() {
               </button>
 
               {/* Enhanced Output Display */}
-              <div className="mt-4 bg-gray-800/80 p-4 rounded-lg border border-cyan-600 shadow-lg shadow-cyan-500/20 relative">
+              <div className="mt-4 bg-gray-800/80 p-4 rounded-lg border border-cyan-600 shadow-lg shadow-cyan-500/20 relative overflow-x-auto">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-green-400 to-cyan-400"></div>
                 <h3 className="text-lg font-semibold mb-2 text-green-300 font-mono">OUTPUT:</h3>
                 <pre className="text-green-300 whitespace-pre-wrap font-mono text-sm bg-gray-900/50 p-3 rounded border-l-2 border-green-400 shadow-lg shadow-green-500/20">
@@ -515,10 +501,10 @@ export default function StoryMode() {
         </div>
 
         {/* Enhanced Navigation Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
           <Link
             to="/"
-            className="group relative px-6 py-3 bg-gradient-to-r from-gray-800 to-gray-700 hover:from-gray-700 hover:to-gray-600 text-white rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg text-center overflow-hidden border border-gray-600 hover:border-gray-500"
+            className="group relative px-6 py-3 min-h-[48px] text-base sm:text-lg bg-gradient-to-r from-gray-800 to-gray-700 hover:from-gray-700 hover:to-gray-600 text-white rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg text-center overflow-hidden border border-gray-600 hover:border-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-cyan-400/10 to-cyan-400/0 transform -skew-x-12 translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
             <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
@@ -528,7 +514,7 @@ export default function StoryMode() {
 
           <button
             onClick={restartGame}
-            className="group relative px-6 py-3 bg-gradient-to-r from-red-800 to-red-700 hover:from-red-700 hover:to-red-600 text-white rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg overflow-hidden border border-red-600 hover:border-red-500"
+            className="group relative px-6 py-3 min-h-[48px] text-base sm:text-lg bg-gradient-to-r from-red-800 to-red-700 hover:from-red-700 hover:to-red-600 text-white rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg overflow-hidden border border-red-600 hover:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-400"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-red-400/0 via-red-400/10 to-red-400/0 transform -skew-x-12 translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
             <div className="absolute -inset-1 bg-gradient-to-r from-purple-400 to-pink-400 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>

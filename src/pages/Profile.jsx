@@ -98,8 +98,8 @@ export default function Profile() {
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen p-4 sm:p-6">
         {/* Header Section */}
-        <div className="text-center mb-6 sm:mb-8">
-          <div className="inline-block p-4 sm:p-6 bg-gradient-to-r from-gray-900/90 to-black/90 rounded-xl sm:rounded-2xl border-2 border-cyan-500/50 backdrop-blur-sm shadow-2xl mb-4 sm:mb-6 relative overflow-hidden">
+        <div className="text-center mb-6 sm:mb-8 mt-4 sm:mt-8">
+          <div className="inline-block p-4 sm:p-6 bg-gradient-to-r from-gray-900/90 to-black/90 rounded-xl sm:rounded-2xl border-2 border-cyan-500/50 backdrop-blur-sm shadow-2xl mb-4 sm:mb-6 relative overflow-hidden pt-8 sm:pt-0">
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-blue-500/20 rounded-xl sm:rounded-2xl blur animate-pulse"></div>
             <div className="relative z-10">
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-blue-400 bg-clip-text text-transparent mb-2 drop-shadow-lg">
@@ -152,39 +152,6 @@ export default function Profile() {
                   <div className="relative z-10">
                     <div className="text-xs sm:text-sm text-yellow-300 font-medium">XP</div>
                     <div className="text-lg sm:text-xl font-bold text-yellow-400">{xp}</div>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-br from-pink-600/20 to-pink-700/20 p-3 sm:p-4 rounded-lg border border-pink-400/30 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-pink-400/0 via-pink-400/10 to-pink-400/0 animate-pulse"></div>
-                  <div className="relative z-10">
-                    <div className="text-xs sm:text-sm text-pink-300 font-medium">Challenges</div>
-                    <div className="text-lg sm:text-xl font-bold text-pink-400">{Math.floor(xp / 10)}</div>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-br from-blue-600/20 to-blue-700/20 p-3 sm:p-4 rounded-lg border border-blue-400/30 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400/0 via-blue-400/10 to-blue-400/0 animate-pulse"></div>
-                  <div className="relative z-10">
-                    <div className="text-xs sm:text-sm text-blue-300 font-medium">Progress</div>
-                    <div className="text-lg sm:text-xl font-bold text-blue-400">{getProgressToNextLevel().toFixed(0)}%</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Progress Bar */}
-              <div className="mb-6">
-                <div className="flex justify-between text-xs sm:text-sm text-gray-300 mb-2">
-                  <span>Level {level}</span>
-                  <span>Level {level + 1}</span>
-                </div>
-                <div className="w-full bg-gray-700 rounded-full h-2 sm:h-3 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-purple-400/20 animate-pulse"></div>
-                  <div 
-                    className="h-full bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full transition-all duration-1000 ease-out relative overflow-hidden"
-                    style={{ width: `${getProgressToNextLevel()}%` }}
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-pulse"></div>
                   </div>
                 </div>
               </div>

@@ -21,7 +21,7 @@ export default function Register() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-black">
+    <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-black pt-24 pb-8 safe-area-top safe-area-bottom">
       {/* Animated neon/glassmorphism background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-800 opacity-90"></div>
@@ -55,8 +55,8 @@ export default function Register() {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 w-full max-w-sm mx-auto p-6 bg-black/80 border-2 border-cyan-400/30 rounded-2xl shadow-2xl backdrop-blur-md gaming-register-panel">
-        <h1 className="text-3xl font-black mb-4 text-center bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse drop-shadow-lg">
+      <div className="relative z-10 w-full max-w-sm mx-auto p-6 bg-black/80 border-2 border-cyan-400/30 rounded-2xl shadow-2xl backdrop-blur-md gaming-register-panel mt-4 sm:mt-8">
+        <h1 className="text-3xl font-black mb-4 text-center bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse drop-shadow-lg pt-8 sm:pt-0">
           📝 Register for Algoritale
         </h1>
         <p className="text-gray-400 mb-6 text-center">Begin your coding adventure by choosing a hero name.</p>
@@ -67,14 +67,15 @@ export default function Register() {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           onKeyDown={handleKeyPress}
-          className="w-full p-3 mb-4 rounded-lg bg-gray-800/80 text-white border-2 border-cyan-400/20 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/40 transition-all duration-300 shadow-lg shadow-cyan-400/10 gaming-input"
+          className="w-full p-4 min-h-[48px] mb-4 rounded-lg bg-gray-800/80 text-white border-2 border-cyan-400/20 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/40 transition-all duration-300 shadow-lg shadow-cyan-400/10 gaming-input text-base sm:text-lg"
         />
 
         {error && <p className="text-red-400 text-sm mb-4 text-center animate-pulse">{error}</p>}
 
         <button
           onClick={handleRegister}
-          className={`w-full p-3 rounded-lg font-bold bg-gradient-to-r from-purple-600 via-cyan-600 to-pink-600 hover:from-purple-500 hover:to-cyan-500 text-white shadow-lg shadow-cyan-400/20 border-2 border-cyan-400/30 transition-all duration-200 gaming-btn ${!username.trim() && "opacity-50 cursor-not-allowed"}`}
+          className={`w-full p-4 min-h-[48px] rounded-lg font-bold bg-gradient-to-r from-purple-600 via-cyan-600 to-pink-600 hover:from-purple-500 hover:to-cyan-500 text-white shadow-lg shadow-cyan-400/20 border-2 border-cyan-400/30 transition-all duration-200 gaming-btn focus:outline-none focus:ring-2 focus:ring-cyan-400 ${!username.trim() && "opacity-50 cursor-not-allowed"}`}
+          style={{ marginBottom: 'max(1.5rem, env(safe-area-inset-bottom, 0px))' }}
           disabled={!username.trim()}
         >
           ✅ Register
