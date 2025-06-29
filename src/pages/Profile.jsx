@@ -43,13 +43,6 @@ export default function Profile() {
     return "👶 Newbie";
   };
 
-  const getProgressToNextLevel = () => {
-    const xpForCurrentLevel = (level - 1) * 10;
-    const xpForNextLevel = level * 10;
-    const progress = ((xp - xpForCurrentLevel) / (xpForNextLevel - xpForCurrentLevel)) * 100;
-    return Math.min(100, Math.max(0, progress));
-  };
-
   const handleUsernameChange = (e) => {
     const newUsername = e.target.value;
     setUsername(newUsername);
