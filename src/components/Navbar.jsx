@@ -25,7 +25,7 @@ export default function Navbar() {
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-purple-500/50 via-cyan-400/80 to-blue-500/50 shadow-lg shadow-cyan-400/30"></div>
       </div>
 
-      <nav className="mobile-nav-fix relative z-10 bg-black/95 backdrop-blur-sm border-b border-cyan-400/60 text-white px-3 sm:px-8 py-3 sm:py-4 flex justify-between items-center shadow-2xl shadow-cyan-400/10 safe-area-top border-neon-gaming">
+      <nav className="mobile-nav-fix relative z-10 bg-black/95 backdrop-blur-sm border-b border-cyan-800/40 text-white px-3 sm:px-8 py-3 sm:py-4 flex justify-between items-center shadow-lg safe-area-top">
         {/* Animated corner accents - Hidden on mobile */}
         <div className="absolute top-0 left-0 w-20 h-20 pointer-events-none mobile-hide-decorations sm:block">
           <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-cyan-400 opacity-60 animate-pulse"></div>
@@ -116,21 +116,14 @@ export default function Navbar() {
         <div className="md:hidden relative">
           <button
             onClick={toggleMobileMenu}
-            className="relative p-3 min-w-[48px] min-h-[48px] text-cyan-400 hover:text-white transition-all duration-300 group border border-cyan-400/30 rounded-md bg-black/50 backdrop-blur-sm hover:bg-cyan-400/20 cursor-pointer shadow-neon focus:outline-none focus:ring-2 focus:ring-cyan-400"
-            style={{ boxShadow: '0 0 12px 2px #22d3ee, 0 0 32px 8px #7c3aed55', zIndex: 100 }}
+            className="relative p-3 min-w-[48px] min-h-[48px] text-cyan-400 hover:text-white transition-all duration-300 group border border-cyan-400/30 rounded-md bg-black/50 backdrop-blur-sm hover:bg-cyan-400/20 cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-400"
+            style={{ zIndex: 100 }}
             aria-label="Toggle mobile menu"
           >
             {/* Animated hamburger lines */}
-            <div className="w-5 h-0.5 bg-current mb-1.5 transition-all duration-300 group-hover:bg-white animate-pulse-fast"></div>
-            <div className="w-5 h-0.5 bg-current mb-1.5 transition-all duration-300 group-hover:bg-white animate-pulse-fast"></div>
-            <div className="w-5 h-0.5 bg-current transition-all duration-300 group-hover:bg-white animate-pulse-fast"></div>
-            {/* Neon animated corners - Hidden on mobile for performance */}
-            <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-cyan-400 animate-corner-glow mobile-hide-decorations"></div>
-            <div className="absolute top-0 right-0 w-2 h-2 border-t-2 border-r-2 border-purple-400 animate-corner-glow mobile-hide-decorations"></div>
-            <div className="absolute bottom-0 left-0 w-2 h-2 border-b-2 border-l-2 border-blue-400 animate-corner-glow mobile-hide-decorations"></div>
-            <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-green-400 animate-corner-glow mobile-hide-decorations"></div>
-            {/* Neon glow effect - Reduced on mobile */}
-            <div className="absolute inset-0 rounded-md pointer-events-none animate-hamburger-glow mobile-reduce-animations"></div>
+            <div className="w-5 h-0.5 bg-current mb-1.5 transition-all duration-300 group-hover:bg-white"></div>
+            <div className="w-5 h-0.5 bg-current mb-1.5 transition-all duration-300 group-hover:bg-white"></div>
+            <div className="w-5 h-0.5 bg-current transition-all duration-300 group-hover:bg-white"></div>
           </button>
 
           {/* Dropdown Mobile Menu using Portal with gaming effects */}
@@ -253,54 +246,17 @@ export default function Navbar() {
         />
       )}
 
-      {/* CSS Animations - Optimized for mobile */}
+      {/* Add a subtle animated gradient bar below the Navbar for gaming effect */}
+      <div className="absolute left-0 right-0 bottom-0 h-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-navbar-bar" style={{zIndex: 9}} />
       <style jsx>{`
-        .gaming-dropdown {
-          animation: dropdownSlide 0.3s ease-out;
+        @keyframes navbar-bar {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
         }
-        
-        .gaming-item {
-          position: relative;
-          overflow: hidden;
-        }
-        
-        .gaming-item::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: -100%;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.1), transparent);
-          transition: left 0.5s;
-        }
-        
-        .gaming-item:hover::before {
-          left: 100%;
-        }
-        
-        @keyframes dropdownSlide {
-          from {
-            opacity: 0;
-            transform: translateY(-10px) scale(0.95);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-          }
-        }
-        
-        @media (max-width: 768px) {
-          .gaming-dropdown {
-            animation-duration: 0.2s;
-          }
-        }
-
-        .border-neon-gaming {
-          box-shadow: 0 0 8px 2px #22d3ee, 0 0 16px 4px #7c3aed55, 0 0 0 2px #a21caf inset;
-          border-radius: 0.75rem;
-          border-width: 2px;
-          border-image: linear-gradient(90deg, #22d3ee 0%, #7c3aed 50%, #a21caf 100%) 1;
+        .animate-navbar-bar {
+          background-size: 200% 200%;
+          animation: navbar-bar 8s ease-in-out infinite;
         }
       `}</style>
     </>
