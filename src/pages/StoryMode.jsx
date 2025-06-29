@@ -322,9 +322,9 @@ export default function StoryMode() {
       {/* Main content */}
       <div className="relative z-10 max-w-4xl mx-auto pb-24">
         {/* Enhanced Header with Gaming Style */}
-        <div className="text-center mb-8 mt-4 sm:mt-8">
+        <div className="text-center mb-8 mt-20 pt-12 sm:mt-24 sm:pt-16">
           <div className="relative inline-block">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-green-400 bg-clip-text text-transparent animate-pulse pt-8 sm:pt-0">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-green-400 bg-clip-text text-transparent animate-pulse" style={{zIndex: 2, position: 'relative'}}>
               📖 STORY MODE
             </h1>
             {/* Gaming title glow effect */}

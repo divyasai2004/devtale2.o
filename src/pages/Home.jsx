@@ -5,7 +5,7 @@ export default function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-black mobile-content-padding">
+    <div className="min-h-screen relative overflow-hidden bg-black mobile-content-padding pt-16 pb-8">
       {/* Dark gaming grid background - Now visible on mobile */}
       <div className="absolute inset-0 opacity-15">
         <div 
@@ -66,10 +66,10 @@ export default function Home() {
       </div>
 
       {/* Main content container */}
-      <div className="relative z-10 min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-20 sm:pt-0 mobile-padding">
+      <div className="relative z-10 min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-8 sm:pt-0 mobile-padding">
         
         {/* Gaming title with dark glow - Responsive sizing */}
-        <div className="text-center mb-4 sm:mb-6 md:mb-8 lg:mb-12">
+        <div className="text-center mb-4 sm:mb-6 md:mb-8 lg:mb-10">
           <div className="relative">
             <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-black mb-1 sm:mb-2 md:mb-4 lg:mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-green-400 bg-clip-text text-transparent drop-shadow-2xl animate-pulse text-balance">
                Welcome to🍵
@@ -91,7 +91,7 @@ export default function Home() {
         </div>
 
         {/* Dark gaming description panel - Responsive sizing */}
-        <div className="text-center mb-4 sm:mb-6 md:mb-8 lg:mb-12 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto">
+        <div className="text-center mb-4 sm:mb-6 md:mb-8 lg:mb-10 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto">
           <div className="relative">
             <div className="bg-gray-900/80 backdrop-blur-sm border border-cyan-400/30 rounded-xl p-3 sm:p-4 md:p-6 shadow-2xl shadow-black/50">
               <div className="absolute top-2 left-3 flex space-x-1 mobile-hide-decorations sm:block">
@@ -109,11 +109,11 @@ export default function Home() {
 
         {/* Your original CTA button - Responsive sizing */}
         <button
-          className="bg-gray-800 border border-white-400 text-white px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-base sm:text-lg hover:bg-purple hover:text-black transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl min-h-[48px] min-w-[48px] focus:outline-none focus:ring-2 focus:ring-cyan-400"
+          className="bg-gray-800 border border-white-400 text-white px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-base sm:text-lg hover:bg-purple hover:text-black transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl min-h-[48px] min-w-[48px] focus:outline-none focus:ring-2 focus:ring-cyan-400 mt-4"
           style={{ marginBottom: 'max(1.5rem, env(safe-area-inset-bottom, 0px))' }}
           onClick={() => navigate("/story")}
         >
-          Begin the Adventure ��
+          Begin the Adventure 🎮
         </button>
 
         {/* Dark gaming HUD elements - Responsive positioning and sizing */}

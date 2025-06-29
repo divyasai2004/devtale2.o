@@ -25,7 +25,7 @@ export default function Navbar() {
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-purple-500/50 via-cyan-400/80 to-blue-500/50 shadow-lg shadow-cyan-400/30"></div>
       </div>
 
-      <nav className="mobile-nav-fix relative z-10 bg-black/95 backdrop-blur-sm border-b border-cyan-400/30 text-white px-3 sm:px-8 py-3 sm:py-4 flex justify-between items-center shadow-2xl shadow-cyan-400/10 safe-area-top">
+      <nav className="mobile-nav-fix relative z-10 bg-black/95 backdrop-blur-sm border-b border-cyan-400/60 text-white px-3 sm:px-8 py-3 sm:py-4 flex justify-between items-center shadow-2xl shadow-cyan-400/10 safe-area-top border-neon-gaming">
         {/* Animated corner accents - Hidden on mobile */}
         <div className="absolute top-0 left-0 w-20 h-20 pointer-events-none mobile-hide-decorations sm:block">
           <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-cyan-400 opacity-60 animate-pulse"></div>
@@ -294,6 +294,13 @@ export default function Navbar() {
           .gaming-dropdown {
             animation-duration: 0.2s;
           }
+        }
+
+        .border-neon-gaming {
+          box-shadow: 0 0 8px 2px #22d3ee, 0 0 16px 4px #7c3aed55, 0 0 0 2px #a21caf inset;
+          border-radius: 0.75rem;
+          border-width: 2px;
+          border-image: linear-gradient(90deg, #22d3ee 0%, #7c3aed 50%, #a21caf 100%) 1;
         }
       `}</style>
     </>
