@@ -176,7 +176,7 @@ export default function Login() {
           <div className="relative z-10">
             <div className="mb-6">
               <label className="block text-green-300 text-sm font-semibold mb-2">
-                🎮 Your Hero Name
+                 Your Hero Name
               </label>
               <input
                 type="text"

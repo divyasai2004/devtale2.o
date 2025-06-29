@@ -229,7 +229,7 @@ export default function StoryMode() {
 
   const handleChoice = (choice) => {
     if (choice.action === "codeArena") {
-      navigate("/arena");
+      navigate("/code-arena");
     } else if (choice.nextScene) {
       setCurrentSceneId(choice.nextScene);
     }
