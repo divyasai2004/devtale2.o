@@ -149,7 +149,7 @@ export default function Profile() {
                 </div>
               </div>
 
-              {/* Avatar Section */}
+              {/* Avatar Section  */}
               <div className="text-center mb-6">
                 <div className="text-6xl sm:text-7xl mb-3 animate-bounce">{getAvatar().split(" ")[0]}</div>
                 <div className="text-lg sm:text-xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">

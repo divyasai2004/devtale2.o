@@ -478,7 +478,7 @@ export default function StoryMode() {
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-cyan-400/20 to-cyan-400/0 transform -skew-x-12 translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
                 <span className="relative z-10">{isAnimating ? '⚔️ Running...' : '▶ Run Code'}</span>
-                <div className="absolute top-2 right-2 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">⚡</div>
+                <div className="absolute top-2 right-2 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
 
               {/* Enhanced Output Display */}
@@ -504,7 +504,7 @@ export default function StoryMode() {
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-cyan-400/10 to-cyan-400/0 transform -skew-x-12 translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
             <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
             <span className="relative z-10 font-semibold"> Back to Home</span>
-            <div className="absolute top-2 right-2 text-xs text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">⚡</div>
+            <div className="absolute top-2 right-2 text-xs text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </Link>
 
           <button
@@ -514,7 +514,7 @@ export default function StoryMode() {
             <div className="absolute inset-0 bg-gradient-to-r from-red-400/0 via-red-400/10 to-red-400/0 transform -skew-x-12 translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
             <div className="absolute -inset-1 bg-gradient-to-r from-purple-400 to-pink-400 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
             <span className="relative z-10 font-semibold">Restart Game</span>
-            <div className="absolute top-2 right-2 text-xs text-red-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">⚡</div>
+            <div className="absolute top-2 right-2 text-xs text-red-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </button>
         </div>
       </div>
