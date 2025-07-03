@@ -4,7 +4,7 @@
 
 > 🎯 "Where learning meets gaming!"
 
-[🌐 Live Demo](https://dt-self.vercel.app/)
+[Live Demo](https://dt-self.vercel.app/)
 
 ---
 
